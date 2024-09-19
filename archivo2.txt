@@ -1,2 +1,135 @@
-chanchito feliz
-chanchito feliz
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Mapache Bigotón</title>
+    <style>
+        body {
+            background-color: #81c583;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: rgba(117, 66, 8, 0.904);
+        }
+        .container {
+            background-color: #81c583;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #81c583;
+            width: 800px;
+            display: flex;
+            align-items: center;
+        }
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .form-container {
+            flex: 2;
+            padding-left: 20px;
+        }
+        .form-container h2 {
+            margin-bottom: 40px;
+            font-size: 50px;
+        }
+        .form-container label {
+            width: 300px;
+            margin-right: 20px;
+            text-align: right;
+            color: black;
+        }
+        .form-container .form-group {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .form-container input[type="text"], .form-container input[type="password"], .form-container input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-container button {
+            width: 48%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .register-btn {
+            background-color: #4CAF50; 
+            color: white;
+        }
+        .cancel-btn {
+            background-color: #f43636; 
+            color: white;
+        }
+        .login-link {
+            margin-top: 10px;
+            display: block;
+            color: rgba(117, 66, 8, 0.904);
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const usuario = document.getElementById('usuario').value;
+            const contrasena = document.getElementById('contrasena').value;
+
+            if (!nombre || !telefono || !usuario || !contrasena) {
+                alert('Todos los campos son obligatorios.');
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.ngenespanol.com/wp-content/uploads/2024/04/estos-son-algunos-de-los-datos-mas-curiosos-sobre-los-mapaches-1280x720.jpg" alt="Imagen de la barbería">
+        </div>
+        <div class="form-container">
+            <h2>Registro</h2>
+            <form onsubmit="validateForm(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" required placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="usuario">Nombre de usuario:</label>
+                    <input type="text" id="usuario" required placeholder="Nombre de usuario">
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" required placeholder="Contraseña">
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="register-btn" formaction="PaginaPrincipal.html">Registrar</button>
+                    <button type="submit" class="cancel-btn" formaction="PaginaPrincipal.html">Cancelar</button>
+                </div>
+            </form>
+            <a href="InicioSesion.html" class="login-link">¿Ya tienes una cuenta? Inicia Sesión</a>
+        </div>
+    </div>
+</body>
+</html>
