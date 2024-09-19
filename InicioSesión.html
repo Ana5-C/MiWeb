@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Mapache Bigotón</title>
+    <style>
+        body {
+            background-color: #81c583; /* Fondo verde */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            height: 100vh;
+            margin: 0;
+            color:rgba(117, 66, 8, 0.904);
+        }
+        .container {
+            background-color: #81c583;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #81c583;
+            width: 500px;
+            text-align: center;
+        }
+        .form-container {
+            flex-grow: 1;
+        }
+        .form-container h2 {
+            margin-bottom: 40px;
+            font-size: 50px
+        }
+        .form-container label {
+            width: 300px;
+            margin-right: 20px;
+            text-align: right;
+            color: black;
+            
+        }
+        .form-container .form-group {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            
+        }
+        .container input[type="text"], .container input[type="password"], .container input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .container button {
+            width: 48%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .register-btn {
+            background-color: #4CAF50; /* Botón verde */
+            color: white;
+        }
+        .cancel-btn {
+            background-color: #f44336; /* Botón rojo */
+            color: white;
+        }
+        .login-link {
+            margin-top: 10px;
+            display: block;
+            color: rgba(117, 66, 8, 0.904);
+            text-decoration: underline;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Inicio de Sesión</h2>
+            <form>
+                <div class="form-group">
+                    <label for="usuario">Nombre de usuario:</label>
+                    <input type="text" id="usuario" required placeholder="Nombre de usuario" >
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" required placeholder="Contraseña" >
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="register-btn" formaction="PaginaPrincipal.html">Registrar</button>
+                    <button type="submit" class="cancel-btn" formaction="PaginaPrincipal.html">Cancelar</button>
+                </div>
+            </form>
+            <a href="Registro.html" class="login-link">¿No tienes una cuenta? Regístrate</a>
+        </div>
+    </div>
+</body>
+</html>
